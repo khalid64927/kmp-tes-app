@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="current_details">Current details</string>
+    <string name="humidity">Humidity</string>
+    <string name="dew_point">Dew point</string>
+    <string name="pressure">Pressure</string>
+    <string name="uv_index">UV index</string>
+    <string name="visibility">Visibility</string>
+    <string name="empty_query_message">Add a location to show the weather</string>
+    <string name="error_message">There was an error fetching the weather.</string>
+    <string name="retry">Retry</string>
+    <string name="rain_chance">Chance</string>
+    <string name="rain_volume">Volume\n(mm)</string>
+    <string name="rain_total_daily_volume">Total daily volume</string>
+    <string name="location_bar_placeholder">Click here to add a location</string>
+    <string name="celsius">°C</string>
+    <string name="feels_like_temp">Feels like %s°</string>
+    <string name="wind">Wind</string>
+    <string name="km_h">km/h</string>
+    <string name="today">Today</string>
+    <string name="temperature_degree_symbol">%s°</string>
+    <string name="temperature_celsius">%s°</string>
+    <string name="chance_rain_percentage">%s%%</string>
+    <string name="tab_name_today">Today</string>
+    <string name="tab_name_tomorrow">Tomorrow</string>
+    <string name="tab_name_three_days">3 days</string>
+    <string name="wind_speed_light">Light</string>
+    <string name="wind_speed_moderate">Moderate</string>
+    <string name="wind_speed_strong">Strong</string>
+    <string name="wind_speed_super_strong">Super strong</string>
+    <string name="today_rain_chance">%s%% chance of precipitation today</string>
+    <string name="tomorrow_rain_chance">%s%% chance of precipitation</string>
+    <string name="humidity_percentage">%s%%</string>
+    <string name="pressure_mbar">%s mBar</string>
+    <string name="total_precipitation_mm">%s mm</string>
+    <string name="visibility_km">%s km</string>
+    <string name="wind_direction_north">Now · From north</string>
+    <string name="wind_direction_northeast">Now · From northeast</string>
+    <string name="wind_direction_east">Now · From east</string>
+    <string name="wind_direction_southeast">Now · From southeast</string>
+    <string name="wind_direction_south">Now · From south</string>
+    <string name="wind_direction_southwest">Now · From southwest</string>
+    <string name="wind_direction_west">Now · From west</string>
+    <string name="wind_direction_northwest">Now · From northwest</string>
+    <string name="search_hint">Search places</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="sunrise_sunset">Sunrise &amp; sunset</string>
+    <string name="moonrise">Moonrise</string>
+    <string name="moonset">Moonset</string>
+    <string name="moonrise_moonset">Moonrise &amp; Moonset</string>
+    <string name="add_location_to_list">Add this location to your list?</string>
+    <string name="add">Add</string>
+    <string name="saved_locations">Saved Locations</string>
+    <string name="manage_locations">Manage</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="min_max_temperatures">Day %s°\u2191 · Night %s°\u2193</string>
+    <string name="chance_of_rain">Chance of rain</string>
+    <string name="sunrise_sunset_tomorrow_details">Sunrise/sunset</string>
+    <string name="max_wind_speed">Max: %s km/h</string>
+
+    <!--Prepaid Strings-->
+    <!--TC-->
+    <string name="tc_title">Terms and Conditions</string>
+    <string name="tc_para_one">heya understands that privacy is important to you. We collect information to better understand your needs, enhance our customer engagement and improve our products and services.</string>
+    <string name="tc_title_one">Specifically, we collect information about you to:</string>
+    <string name="tc_end_text">By clicking on the "I agree" button, you consent to heya and the Singtel Group collecting, using and disclosing your data for the purposes stated above and in accordance with our Data Protection Policy. You may withdraw consent at any time by turning off the relevant consent setting in your device or by deleting this App.
+        You agree that all information in the App are provided on an "as is" and "as available" basis. While we make every effort to ensure that all content displayed is accurate and complete, the content is for informative purposes only and products offered are subject to availability and change. Heya and the Singtel Group disclaim all and any express or implied warranties of any kind, including but not limited to warranties about accuracy, completeness, correctness, fitness or suitability for any purpose in relation to the App\'s contents.
+        You can read more about the full Terms and Conditions that governs the use of this App.</string>
+
+
+    <string name="tc_title_two">We need your permission to access certain functionalities on your device, namely:</string>
+
+    <string name="tc_bullet_point_1_1">Authenticate your heya mobile number.</string>
+    <string name="tc_bullet_point_1_2">Provide goods and services through heya, our designated representatives and/or business partners, to you or parties designated by you (and to facilitate matters ancillary to the provision of such goods and services).</string>
+    <string name="tc_bullet_point_1_3">Verify and process payment when you purchase goods and services from us.</string>
+    <string name="tc_bullet_point_1_4">Verify and record your personal particulars including comparing them with information from other sources and using the information to communicate with you.</string>
+    <string name="tc_bullet_point_1_5">Enable multi-factor authentication so that we can protect you against unauthorised log-ins.</string>
+
+    <string name="tc_bullet_point_2_1">Contacts: to retrieve contact details for name display.</string>
+    <string name="tc_bullet_point_2_2">SMS: to send you One-Time Pins (OTPs) and personalised marketing offers.</string>
+    <string name="tc_bullet_point_2_3">Location and Mobile/WiFi network: to monitor our network and help us understand and improve your network experience. This is done by checking your signal strength, connection speed, WiFi access point and what mobile phone towers you\'re connected to based on your location. We don\'t see things like who you\'re calling, what websites you\'re browsing or what apps you\'re using.</string>
+    <string name="tc_iagree">I agree</string>
+
+    <!--login-->
+    <string name="login_title">Let\'s log in to begin</string>
+    <string name="login_hint">heya mobile number</string>
+    <string name="login_iagree">I agree</string>
+    <string name="login_inst">Enter an 8-digit heya number</string>
+    <string name="login_invalid_num">Enter a valid 8-digit heya number. For number transfers, wait till it has completed before logging in again. </string>
+    <!--otp-->
+    <string name="otp_title">Log in</string>
+    <string name="otp_header_h1">Enter SMS OTP</string>
+    <string name="otp_header">A 6-digit OTP has been sent to</string>
+    <string name="otp_resend">Resend OTP</string>
+
+
+</resources>

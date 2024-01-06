@@ -1,0 +1,124 @@
+[versions]
+agp-version = "8.2.0"
+androidx-appcompat-version = "1.6.1"
+androidx-activity-compose-version = "1.8.1"
+androidx-compose-animation-version = "1.5.4"
+androidx-compose-ui-version = "1.5.4"
+androidx-core-version = "1.12.0"
+androidx-datastore-version = "1.1.0-alpha06"
+com-codingfeline-buildkonfig-gradle-plugin-version = "0.15.0"
+com-google-android-gms-play-services-location-version = "21.0.1"
+compose-version = "1.5.11"
+desugar_jdk_libs = "2.0.3"
+dev-icerock-moko-mvvm-version = "0.16.1"
+dev-icerock-moko-permissions-version = "0.16.0"
+dev-icerock-moko-resources-version = "0.23.0"
+io-insert-koin-core-version = "3.5.0"
+kotlin-version = "1.9.21"
+ktor-version = "2.3.6"
+media-kamel-image-version = "0.8.3"
+moe-tlaster-precompose-version = "1.5.7"
+org-jetbrains-kotlin-multiplatform-version = "1.9.21"
+org-jetbrains-kotlin-native-cocoapods-version = "1.9.21"
+org-jetbrains-kotlinx-coroutines-core-version = "1.7.3"
+org-jetbrains-kotlinx-datetime-version = "0.4.1"
+sqldelight-version = "1.5.5"
+ui-tooling = "1.4.3"
+kermit = "2.0.1"
+kotest = "5.5.4"
+turbine = "0.13.0"
+material3 = "1.1.2"
+kase64 = "1.1.0"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose-version" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat-version" }
+androidx-compose-animation = { module = "androidx.compose.animation:animation", version.ref = "androidx-compose-animation-version" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "androidx-compose-ui-version" }
+androidx-compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose-ui-version" }
+androidx-core = { module = "androidx.core:core", version.ref = "androidx-core-version" }
+androidx-datastore-core-okio = { module = "androidx.datastore:datastore-core-okio", version.ref = "androidx-datastore-version" }
+androidx-datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "androidx-datastore-version" }
+com-codingfeline-buildkonfig-gradle-plugin = { module = "com.codingfeline.buildkonfig:buildkonfig-gradle-plugin", version.ref = "com-codingfeline-buildkonfig-gradle-plugin-version" }
+com-google-android-gms-play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "com-google-android-gms-play-services-location-version" }
+com-squareup-sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight-version" }
+com-squareup-sqldelight-coroutines-extensions = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqldelight-version" }
+com-squareup-sqldelight-gradle-plugin = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqldelight-version" }
+com-squareup-sqldelight-native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight-version" }
+com-squareup-sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight-version" }
+desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+dev-icerock-moko-mvvm-compose = { module = "dev.icerock.moko:mvvm-compose", version.ref = "dev-icerock-moko-mvvm-version" }
+dev-icerock-moko-mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "dev-icerock-moko-mvvm-version" }
+dev-icerock-moko-mvvm-flow = { module = "dev.icerock.moko:mvvm-flow", version.ref = "dev-icerock-moko-mvvm-version" }
+dev-icerock-moko-mvvm-flow-compose = { module = "dev.icerock.moko:mvvm-flow-compose", version.ref = "dev-icerock-moko-mvvm-version" }
+dev-icerock-moko-permissions = { module = "dev.icerock.moko:permissions", version.ref = "dev-icerock-moko-permissions-version" }
+dev-icerock-moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "dev-icerock-moko-permissions-version" }
+dev-icerock-moko-resources = { module = "dev.icerock.moko:resources", version.ref = "dev-icerock-moko-resources-version" }
+dev-icerock-moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "dev-icerock-moko-resources-version" }
+dev-icerock-moko-resources-generator-plugin = { module = "dev.icerock.moko:resources-generator", version.ref = "dev-icerock-moko-resources-version" }
+io-insert-koin-android = { module = "io.insert-koin:koin-android", version.ref = "io-insert-koin-core-version" }
+io-insert-koin-core = { module = "io.insert-koin:koin-core", version.ref = "io-insert-koin-core-version" }
+io-ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor-version" }
+io-ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor-version"}
+io-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor-version" }
+io-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor-version" }
+io-ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor-version" }
+io-ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor-version" }
+io-ktor-client-resources = { module = "io.ktor:ktor-client-resources", version.ref = "ktor-version" }
+io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor-version" }
+io-ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor-version" }
+media-kamel-image = { module = "media.kamel:kamel-image", version.ref = "media-kamel-image-version" }
+moe-tlaster-precompose = { module = "moe.tlaster:precompose", version.ref = "moe-tlaster-precompose-version" }
+org-jetbrains-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx-coroutines-core-version" }
+org-jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx-coroutines-core-version" }
+org-jetbrains-kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "org-jetbrains-kotlinx-coroutines-core-version" }
+org-jetbrains-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "org-jetbrains-kotlinx-datetime-version" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "ui-tooling" }
+touchlab-kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json" , version.ref = "kotlin-version"}
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+kase64-peilicke = { group = "de.peilicke.sascha", name = "kase64", version.ref = "kase64" }
+com-benasher44-uuid = { group = "com.benasher44", name = "uuid", version = "0.8.1" }
+
+
+[plugins]
+com-android-application-plugin = { id = "com.android.application", version.ref = "agp-version" }
+com-android-library-plugin = { id = "com.android.library", version.ref = "agp-version" }
+org-jetbrains-compose-plugin = { id = "org.jetbrains.compose", version.ref = "compose-version" }
+org-jetbrains-kotlin-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-version" }
+org-jetbrains-kotlin-multiplatform-plugin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "org-jetbrains-kotlin-multiplatform-version" }
+org-jetbrains-kotlin-native-cocoapods-plugin = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "org-jetbrains-kotlin-native-cocoapods-version" }
+
+[bundles]
+datastore = [
+    "androidx-datastore-core-okio",
+    "androidx-datastore-preferences-core",
+]
+ktor = [
+    "io-ktor-client-core",
+    "io-ktor-client-resources",
+    "io-ktor-client-logging",
+    "io-ktor-client-content-negotiation",
+    "io-ktor-serialization-kotlinx-json",
+    "io-ktor-client-auth",
+]
+moko-mvvm = [
+    "dev-icerock-moko-mvvm-core",
+    "dev-icerock-moko-mvvm-compose",
+    "dev-icerock-moko-mvvm-flow",
+    "dev-icerock-moko-mvvm-flow-compose",
+]
+moko-permissions = [
+    "dev-icerock-moko-permissions",
+    "dev-icerock-moko-permissions-compose",
+]
+moko-resources = [
+    "dev-icerock-moko-resources",
+    "dev-icerock-moko-resources-compose",
+]
+sqldelight = [
+    "com-squareup-sqldelight-runtime",
+    "com-squareup-sqldelight-coroutines-extensions",
+]
