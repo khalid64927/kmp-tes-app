@@ -4,9 +4,9 @@ Weather app using Kotlin Multiplatform and Compose Multiplatform.
 1. In `local.properties`, add below properties
     1. FLAVOR=uat
     ## Prepaid config
-    2. prepaidUatUrl=https://www.api.singtel.com
-    3. prepaidProductionUrl=https://www.api.singtel.com
-    4. prepaidUatClientId=JBELxykgMGAjJVwHjfqTAi4WWewbgcMO
+    2. prepaidUatUrl=https://www.api.<domain>.com
+    3. prepaidProductionUrl=https://www.api.<domain>.com
+    4. prepaidUatClientId=<clientId>
     5. prepaidProdClientId=pqrs
     6. prepaidUatClientSecret=efgh
     7. prepaidProdClientSecret=efgh
