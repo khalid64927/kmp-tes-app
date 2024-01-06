@@ -12,6 +12,8 @@ plugins {
     id("com.codingfeline.buildkonfig")
     id("com.squareup.sqldelight")
     id("dev.icerock.mobile.multiplatform-resources")
+    id("maven-publish")
+    id("signing")
 }
 
 kotlin {

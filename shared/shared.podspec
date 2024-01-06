@@ -1,10 +1,10 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'shared'
     spec.version                  = '1.0'
-    spec.homepage                 = 'Link to the Shared Module homepage'
-    spec.source                   = { :http=> ''}
-    spec.authors                  = ''
-    spec.license                  = ''
+    spec.homepage                 = 'https://github.com/khalid64927/kmp-tes-app'
+    spec.source                   = { :git=> 'https://github.com/khalid64927/kmp-tes-app.git'}
+    spec.authors                  = 'Mohammed Khalid Hamid'
+    spec.license                  = 'MIT'
     spec.summary                  = 'Some description for the Shared Module'
     spec.vendored_frameworks      = 'build/cocoapods/framework/shared.framework'
     spec.libraries                = 'c++'
