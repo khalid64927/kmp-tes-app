@@ -31,61 +31,68 @@ import kotlinx.coroutines.launch
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun DialogExamples() {
-        val sheetState = rememberModalBottomSheetState()
-        val scope = rememberCoroutineScope()
-        var showBottomSheet by remember { mutableStateOf(false) }
         TransparentBackground {
-            Scaffold(
-                floatingActionButton = {
-                    ExtendedFloatingActionButton(
-                        text = { Text("Show bottom sheet") },
-                        icon = { Icon(Icons.Filled.Add, contentDescription = "") },
-                        onClick = {
-                            showBottomSheet = true
-                        }
-                    )
+            wrapperComposable()
+        }
+    }
+
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun wrapperComposable(){
+    val sheetState = rememberModalBottomSheetState()
+    val scope = rememberCoroutineScope()
+    var showBottomSheet by remember { mutableStateOf(false) }
+    Scaffold(
+        floatingActionButton = {
+            ExtendedFloatingActionButton(
+                text = { Text("Show bottom sheet") },
+                icon = { Icon(Icons.Filled.Add, contentDescription = "") },
+                onClick = {
+                    showBottomSheet = true
                 }
+            )
+        }
+    ) {
+        // Scaffold content
+        if (showBottomSheet) {
+            ModalBottomSheet(
+                onDismissRequest = {
+                    showBottomSheet = false
+                },
+                sheetState = sheetState
             ) {
-                // Scaffold Content
-                if (showBottomSheet) {
-                    ModalBottomSheet(
-                        onDismissRequest = {
-                            showBottomSheet = false
-                        },
-                        sheetState = sheetState
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .padding(16.dp),
-                        ) {
-                            Text(
-                                text = "This is a dummy content inside the bottom sheet",
-                                style = MaterialTheme.typography.headlineMedium
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Text(
-                                text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                                style = MaterialTheme.typography.bodyMedium
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Button(onClick = {
-                                scope.launch { sheetState.hide() }.invokeOnCompletion {
-                                    if (!sheetState.isVisible) {
-                                        showBottomSheet = false
-                                    }
-                                }
-                            }) {
-                                Text("Hide bottom sheet")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp),
+                ) {
+                    Text(
+                        text = "This is a dummy content inside the bottom sheet",
+                        style = MaterialTheme.typography.headlineMedium
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Button(onClick = {
+                        scope.launch { sheetState.hide() }.invokeOnCompletion {
+                            if (!sheetState.isVisible) {
+                                showBottomSheet = false
                             }
-
                         }
-
+                    }) {
+                        Text("Hide bottom sheet")
                     }
+
                 }
+
             }
         }
     }
+}
 
 
 

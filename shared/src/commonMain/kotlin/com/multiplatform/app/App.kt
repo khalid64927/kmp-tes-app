@@ -2,7 +2,7 @@ package com.multiplatform.app
 
 import androidx.compose.runtime.Composable
 import com.multiplatform.app.ui.theme.AppTheme
-import com.multiplatform.app.navigation.HeyaNavigationGraph
+import com.multiplatform.app.navigation.PaymentsNavigationGraph
 import moe.tlaster.precompose.PreComposeApp
 
 @Composable
@@ -14,6 +14,6 @@ fun App(
         darkTheme = darkTheme,
         dynamicColor = dynamicColor,
     ) {
-        HeyaNavigationGraph()
+        PaymentsNavigationGraph()
     }
 }

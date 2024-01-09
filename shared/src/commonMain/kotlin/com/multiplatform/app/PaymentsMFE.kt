@@ -9,10 +9,5 @@ fun PaymentsMFE(
     darkTheme: Boolean,
     dynamicColor: Boolean,
 ) {
-    AppTheme(
-        darkTheme = darkTheme,
-        dynamicColor = dynamicColor,
-    ) {
-        PaymentsNavigationGraph()
-    }
+    App(darkTheme, dynamicColor)
 }

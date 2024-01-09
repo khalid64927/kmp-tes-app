@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'shared'
     spec.version                  = '1.0'
-    spec.homepage                 = 'Link to the Shared Module homepage'
-    spec.source                   = { :http=> ''}
-    spec.authors                  = ''
-    spec.license                  = ''
-    spec.summary                  = 'Some description for the Shared Module'
+    spec.homepage                 = 'https://github.com/khalid64927/kmp-tes-app'
+    spec.source                   = { :git=> 'https://github.com/khalid64927/kmp-tes-app.git'}
+    spec.authors                  = 'Mohammed Khalid Hamid'
+    spec.license                  = 'Apache-2.0'
+    spec.summary                  = 'Kotlin Multiplatform Library for BottomSheet'
     spec.vendored_frameworks      = 'build/cocoapods/framework/shared.framework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '14.1'
+    spec.ios.deployment_target = '9.0'
                 
                 
     if !Dir.exist?('build/cocoapods/framework/shared.framework') || Dir.empty?('build/cocoapods/framework/shared.framework')

@@ -3,8 +3,6 @@ package com.multiplatform.app.ui.theme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.ui.graphics.Color
 
-
-
 // color that are same in Light and Dark
 
 val prepaidIndigo = Color(0xFF21DED7)
@@ -27,7 +25,6 @@ val PrepaidDarkColors = darkColorScheme(
     onTertiary = darkOnTertiary,
     onTertiaryContainer = darkOnTertiaryContainer,
     tertiaryContainer = darkTertiaryContainer,
-    //background = darkBackground,
     background = transparent,
     onBackground = darkOnBackground,
     surface = darkSurface,
@@ -54,7 +51,6 @@ val PrepaidLightColors = darkColorScheme(
     onTertiary = lightOnTertiary,
     onTertiaryContainer = lightOnTertiaryContainer,
     tertiaryContainer = lightTertiaryContainer,
-    //background = lightBackground,
     background = transparent,
     onBackground = lightOnBackground,
     surface = lightSurface,
