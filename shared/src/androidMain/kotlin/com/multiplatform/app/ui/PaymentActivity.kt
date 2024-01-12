@@ -1,23 +1,18 @@
 package com.multiplatform.app.ui
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.compose.foundation.isSystemInDarkTheme
 import com.multiplatform.app.PaymentsMFE
-import moe.tlaster.precompose.lifecycle.PreComposeActivity
-import moe.tlaster.precompose.lifecycle.setContent
 
 
-class PaymentActivity : PreComposeActivity() {
+class PaymentActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        this.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        //this.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         setContent {
-            PaymentsMFE(
-                darkTheme = isSystemInDarkTheme(),
-                dynamicColor = true,
-            )
+            PaymentsMFE(darkTheme = isSystemInDarkTheme(), dynamicColor = true)
         }
     }
 }

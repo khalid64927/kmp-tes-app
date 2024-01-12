@@ -29,7 +29,7 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 fun HeyaNavigationGraph(navigator: Navigator = rememberNavigator()){
     NavHost(
         navigator = navigator,
-        initialRoute = "/dialogExamples",
+        initialRoute = "/splash",
     ) {
         scene("/splash") {
             SplashScreen(
@@ -123,10 +123,6 @@ fun HeyaNavigationGraph(navigator: Navigator = rememberNavigator()){
             WalletScreen(
                 onNavigateToSearch = { navigator.navigate("/walletScreen") },
                 modifier = Modifier.fillMaxSize())
-        }
-
-        scene("/dialogExamples") {
-            DialogExamples()
         }
     }
 }

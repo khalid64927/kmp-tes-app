@@ -10,14 +10,7 @@ struct iOSApp: App {
     
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
-			.onAppear
-			    {
-			        if let window = UIApplication.shared.windows.first
-			            {
-                           window.backgroundColor = UIColor.clear
-                        }
-                }
+            ContentView()
 		}
 	}
 }

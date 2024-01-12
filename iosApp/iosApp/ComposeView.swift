@@ -17,15 +17,8 @@ struct ComposeView: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
-       let mainViewController = MainViewControllerKt.MainViewController()
-       // Set the background color to clear (transparent) in SwiftUI style
-       let uiViewController = UIHostingController(rootView: Color.clear)
-       mainViewController.addChild(uiViewController)
-       mainViewController.view.addSubview(uiViewController.view)
-       uiViewController.didMove(toParent: mainViewController)
-       return mainViewController
-       //MainViewControllerKt.MainViewController()
-
+        let viewController = MainViewControllerKt.TransparentMainViewController()
+        return viewController
     }
 
 }
