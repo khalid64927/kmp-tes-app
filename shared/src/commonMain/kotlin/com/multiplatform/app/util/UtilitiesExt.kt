@@ -19,3 +19,6 @@ inline fun <reified T : Any> T.toJson(): String {
     val json = Json { encodeDefaults = true }
     return json.encodeToString(this)
 }
+
+
+inline fun <reified T: Any?> T.isNull() =  this == null

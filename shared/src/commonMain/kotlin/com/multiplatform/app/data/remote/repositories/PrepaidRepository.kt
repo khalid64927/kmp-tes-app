@@ -8,6 +8,7 @@ import com.multiplatform.app.data.remote.models.Dto.SubmitOtpResponse
 import com.multiplatform.app.data.remote.config.Result
 import com.multiplatform.app.data.remote.requests.AuthenticateRequest
 import com.multiplatform.app.data.remote.requests.GenerateOtpRequest
+import com.multiplatform.app.data.remote.requests.GetPayNowDataRequest
 import com.multiplatform.app.data.remote.requests.RegisterDeviceRequest
 import com.multiplatform.app.data.remote.requests.SubmitOtpRequest
 
@@ -23,6 +24,9 @@ interface PrepaidRepository {
     ): Result<GenerateOtpResponse>
     suspend fun submitOtp(config: RequestConfig<SubmitOtpRequest>
     ): Result<SubmitOtpResponse>
+
+    // TODO
+    suspend fun getPayNowData(config: RequestConfig<GetPayNowDataRequest>): Result<String>
 
 }
 

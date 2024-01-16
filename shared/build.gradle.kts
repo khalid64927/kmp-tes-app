@@ -76,6 +76,7 @@ kotlin {
 
                 api(libs.moe.tlaster.precompose)
                 implementation(libs.touchlab.kermit)
+                implementation(libs.io.github.alexzhirkevich)
             }
         }
         val commonTest by getting {

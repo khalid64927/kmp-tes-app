@@ -95,4 +95,22 @@
     <string name="otp_resend">Resend OTP</string>
 
 
+    <!--Bottom Sheet-->
+    <string name="sheet_cc_remove">Change card\? [Remove](www.singtel.com)</string>
+
+    <!--PayNow-->
+    <string name="paynow_title">PayNow</string>
+    <string name="paynow_timer">This QR code will expire in</string>
+    <string name="paynow_timer_min">minutes.</string>
+    <string name="paynow_amount">You are paying: </string>
+    <string name="paynow_ref">Reference ID # </string>
+    <string name="paynow_instruction_1">Save or screenshot the QR code to make payment with your bank app.</string>
+
+    <!--refer this solution
+        https://stackoverflow.com/questions/65567412/jetpack-compose-text-hyperlink-some-section-of-the-text -->
+    <string name="paynow_instruction_2">Already made payment\? Check payment status</string>
+    <string name="paynow_instruction_3">Prefer to pay with other ways\? Change payment method</string>
+
+
+
 </resources>

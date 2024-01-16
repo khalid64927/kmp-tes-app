@@ -53,5 +53,6 @@ dependencies {
     implementation(libs.androidx.compose.animation)
     implementation(libs.io.insert.koin.android)
     implementation(compose.preview)
+    implementation(libs.androidx.compose.preview)
     debugImplementation(libs.androidx.ui.tooling)
 }

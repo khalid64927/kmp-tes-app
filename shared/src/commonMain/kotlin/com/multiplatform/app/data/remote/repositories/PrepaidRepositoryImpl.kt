@@ -28,6 +28,7 @@ import com.multiplatform.app.data.remote.config.Result.Success
 import com.multiplatform.app.data.remote.config.Result.Failure
 import com.multiplatform.app.data.remote.config.Result
 import com.multiplatform.app.data.remote.models.Dto.ErrorDto
+import com.multiplatform.app.data.remote.requests.GetPayNowDataRequest
 import com.multiplatform.app.util.toJson
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.append
@@ -124,6 +125,11 @@ class PrepaidRepositoryImpl(
                 }
             }
         }
+    }
+
+    override suspend fun getPayNowData(config: RequestConfig<GetPayNowDataRequest>): Result<String> {
+        // TODO
+        return Result.Success("")
     }
 }
 

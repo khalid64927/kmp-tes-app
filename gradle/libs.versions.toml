@@ -31,6 +31,7 @@ kotest = "5.8.0"
 turbine = "1.0.0"
 material3 = "1.1.2"
 kase64 = "1.1.0"
+qrose = "1.0.0-beta3"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose-version" }
@@ -83,6 +84,8 @@ kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-j
 androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 kase64-peilicke = { group = "de.peilicke.sascha", name = "kase64", version.ref = "kase64" }
 com-benasher44-uuid = { group = "com.benasher44", name = "uuid", version = "0.8.1" }
+io-github-alexzhirkevich = {group = "io.github.alexzhirkevich", name = "qrose", version.ref = "qrose"}
+
 
 
 [plugins]
