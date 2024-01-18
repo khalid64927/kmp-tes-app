@@ -55,7 +55,7 @@ fun PaymentItemRow(sheetConfig: SheetConfig){
                 }
             } else {
                 sheetConfig.hyperLinkText?.run {
-                    HyperlinkText(this, onClick = sheetConfig.onClick)
+                    HyperlinkText(stringResource(this), onClick = sheetConfig.onClick)
                 }
             }
         }

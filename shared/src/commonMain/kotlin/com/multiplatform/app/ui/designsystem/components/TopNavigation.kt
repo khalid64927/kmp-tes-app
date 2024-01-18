@@ -15,22 +15,23 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import dev.icerock.moko.resources.ImageResource
 import dev.icerock.moko.resources.StringResource
 import dev.icerock.moko.resources.compose.painterResource
+import dev.icerock.moko.resources.compose.stringResource
 
 @Composable
 fun TopNavigation(topNavConfig : TopNavigationConfig){
-    Row(modifier = Modifier.fillMaxWidth()) {
+    Row(modifier = Modifier.fillMaxWidth().shadow(elevation = 1.dp)) {
         Box(
             modifier = Modifier.
             fillMaxWidth().
             size(height = 60.dp, width = 0.dp).
             padding(10.dp),
         ){
-
             topNavConfig.leftImageResource?.run {
                 Image(
                     modifier = Modifier.
@@ -46,7 +47,7 @@ fun TopNavigation(topNavConfig : TopNavigationConfig){
             Column(modifier = Modifier.align(Alignment.Center)) {
                 TitleTextBold(
                     modifier = Modifier,
-                    stringResource =  topNavConfig.stringResource)
+                    string = stringResource(topNavConfig.stringResource))
             }
 
             topNavConfig.rightImageResource?.run {

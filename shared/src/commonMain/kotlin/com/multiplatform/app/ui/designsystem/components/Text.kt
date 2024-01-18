@@ -4,14 +4,15 @@ import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.sp
+import com.multiplatform.app.ui.theme.MonoColors
+import com.multiplatform.app.ui.theme.MonoColors.lightBlack2
 import dev.icerock.moko.resources.StringResource
 import dev.icerock.moko.resources.compose.stringResource
 
@@ -19,11 +20,11 @@ import dev.icerock.moko.resources.compose.stringResource
 @Composable
 fun TitleTextBold(
     modifier: Modifier = Modifier,
-    stringResource: StringResource){
+    string: String){
     Text(
         modifier = modifier,
-        text = stringResource(stringResource),
-        style = TextTypographyTokens.TitleBold
+        text = string,
+        style = TextTypographyTokens.titleBold
     )
 
 }
@@ -31,22 +32,33 @@ fun TitleTextBold(
 @Composable
 fun TitleTextRegular(
     modifier: Modifier = Modifier,
-    stringResource: StringResource){
+    string: String){
     Text(
         modifier = modifier,
-        text = stringResource(stringResource),
-        style = TextTypographyTokens.TitleRegular
+        text = string,
+        style = TextTypographyTokens.titleRegular
+    )
+}
+
+@Composable
+fun TitleTextRegular2(
+    modifier: Modifier = Modifier,
+    string: String){
+    Text(
+        modifier = modifier,
+        text = string,
+        style = TextTypographyTokens.titleRegular2
     )
 }
 
 @Composable
 fun Body2Text(
     modifier: Modifier = Modifier,
-    stringResource: StringResource
+    string: String
 ){
     Text(
         modifier = modifier,
-        text = stringResource(stringResource),
+        text = string,
         style = TextTypographyTokens.body2
     )
 }
@@ -54,13 +66,23 @@ fun Body2Text(
 @Composable
 fun Body2BoldText(
     modifier: Modifier = Modifier,
-    stringResource: StringResource
+    string: String
 ){
     Text(
         modifier = modifier,
-        text = stringResource(stringResource),
+        text = string,
         style = TextTypographyTokens.body2Bold
     )
+}
+
+@Composable
+fun TitleBoldWhite(modifier: Modifier = Modifier, string: String){
+    Text(
+        modifier = modifier,
+        text = string,
+        style = TextTypographyTokens.titleWhite
+    )
+
 }
 
 /**
@@ -94,11 +116,12 @@ fun Body2BoldText(
  */
 @Composable
 fun HyperlinkText(
-    stringResource: StringResource,
+    string: String,
+    spanStyle: SpanStyle = SpanTypographyTokens.body1,
     modifier: Modifier = Modifier,
-    onClick: (token: String, linkType: LinkType)->Unit
+    onClick: (token: String, linkType: LinkType)->Unit = {_, _ -> }
 ) {
-    val textWithLinks: String = stringResource(stringResource)
+    val textWithLinks: String = string
     val text = buildAnnotatedString() {
         val links = Regex("""\[(.*?)\]\((.*?)\)""").findAll(textWithLinks)
         var currentIndex = 0
@@ -155,29 +178,35 @@ enum class LinkType {
 
 
 object TextTypographyTokens {
-    val TitleBold = TextStyle(
+    val titleBold = TextStyle(
         fontSize = 20.sp,
         lineHeight = 25.sp,
         fontWeight = FontWeight(700),
-        color = Color(0xFF222222),
-        textAlign = TextAlign.Center,
+        color = MonoColors.darkBlack,
         letterSpacing = 0.2.sp,
     )
 
-    val TitleRegular = TextStyle(
+    val titleRegular = TextStyle(
         fontSize = 16.sp,
         lineHeight = 24.sp,
         fontWeight = FontWeight(400),
-        color = Color(0xFF222222),
-
+        color = MonoColors.darkBlack,
         letterSpacing = 0.16.sp,
+    )
+
+    val titleRegular2 = TextStyle(
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        fontWeight = FontWeight(700),
+        color = MonoColors.darkBlack,
+        letterSpacing = 0.32.sp,
     )
 
     val body1 = TextStyle(
         fontSize = 12.sp,
         lineHeight = 18.sp,
         fontWeight = FontWeight(400),
-        color = Color(0xFF565656),
+        color = MonoColors.lightBlack,
         letterSpacing = 0.36.sp,
     )
 
@@ -185,7 +214,15 @@ object TextTypographyTokens {
         fontSize = 12.sp,
         lineHeight = 18.sp,
         fontWeight = FontWeight(400),
-        color = Color(0xFF222222),
+        color = MonoColors.darkBlack,
+        letterSpacing = 0.36.sp,
+    )
+
+    val body3 = TextStyle(
+        fontSize = 12.sp,
+        lineHeight = 18.sp,
+        fontWeight = FontWeight(400),
+        color = MonoColors.allBlack,
         letterSpacing = 0.36.sp,
     )
 
@@ -193,8 +230,16 @@ object TextTypographyTokens {
         fontSize = 12.sp,
         lineHeight = 18.sp,
         fontWeight = FontWeight(700),
-        color = Color(0xFF222222),
+        color = MonoColors.darkBlack,
         letterSpacing = 0.36.sp,
+    )
+
+    val titleWhite =  TextStyle(
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        fontWeight = FontWeight(700),
+        color = MonoColors.white,
+        letterSpacing = 0.32.sp,
     )
 }
 
@@ -202,7 +247,8 @@ object SpanTypographyTokens {
     val body1 = SpanStyle(
         fontSize = 12.sp,
         fontWeight = FontWeight(400),
-        color = Color(0xFF0062F5),
+        color = lightBlack2,
+        textDecoration = TextDecoration.Underline,
         letterSpacing = 0.36.sp,)
 }
 

@@ -6,16 +6,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.multiplatform.app.MR
 import com.multiplatform.app.android.ui.preview.WithTheme
 import com.multiplatform.app.ui.designsystem.components.Body2Text
+import com.multiplatform.app.ui.designsystem.components.Body2BoldText
 import com.multiplatform.app.ui.designsystem.components.HyperlinkText
+import com.multiplatform.app.ui.designsystem.components.TitleBoldWhite
 import com.multiplatform.app.ui.designsystem.components.TitleTextBold
 import com.multiplatform.app.ui.designsystem.components.TitleTextRegular
+import dev.icerock.moko.resources.compose.stringResource
 
 
 @Preview(name = "Text bold Light Mode", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_NO,)
 @Composable
 fun TitleTextBoldPreview(){
     WithTheme {
-        TitleTextBold(stringResource = MR.strings.paynow_title)
+        TitleTextBold(string = stringResource(MR.strings.paynow_title))
     }
 }
 
@@ -23,7 +26,7 @@ fun TitleTextBoldPreview(){
 @Composable
 fun TitleTextRegularPreview(){
     WithTheme {
-        TitleTextRegular(stringResource = MR.strings.paynow_title)
+        TitleTextRegular(string = stringResource(MR.strings.paynow_title))
     }
 }
 
@@ -32,7 +35,7 @@ fun TitleTextRegularPreview(){
 fun HyperLinkTextPreview(){
     WithTheme {
         HyperlinkText(
-            stringResource = MR.strings.sheet_cc_remove,
+            string = stringResource(MR.strings.sheet_cc_remove ),
             onClick = {_, _ -> })
     }
 }
@@ -41,7 +44,21 @@ fun HyperLinkTextPreview(){
 @Composable
 fun Body2TextPreview(){
     WithTheme {
-        Body2Text(stringResource = MR.strings.sheet_cc_remove)
+        Body2Text(string = stringResource(MR.strings.paynow_ref, "92839238"))
     }
+}
+
+@Preview(name = "Text regular Light Mode", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_NO,)
+@Composable
+fun Body2TextBoldPreview(){
+    WithTheme {
+        Body2BoldText(string = stringResource(MR.strings.paynow_ref, "92839238"))
+    }
+}
+
+@Preview(name = "Text regular Light Mode", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES,)
+@Composable
+fun TitleBoldWhitePreview(){
+    TitleBoldWhite(string = stringResource(MR.strings.paynow_ref, "92839238"))
 }
 

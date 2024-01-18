@@ -17,7 +17,7 @@ annotation class ThemePreviews
 
 @Composable
 fun WithTheme(content: @Composable () -> Unit){
-    AppTheme(darkTheme = isSystemInDarkTheme(), dynamicColor = true) {
+    AppTheme(darkTheme = true, dynamicColor = true) {
         Surface {
             content()
         }

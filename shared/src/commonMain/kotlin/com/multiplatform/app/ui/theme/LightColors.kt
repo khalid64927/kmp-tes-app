@@ -6,11 +6,15 @@ val prepaidLightPrimary = Color(0xFF21DED7)
 val transparent = Color.Transparent
 
 
+
+
 // default
-val lightPrimary = Color(0xFF974811)
+//val lightPrimary = Color(0xFF974811)
+val lightPrimary = MonoColors.darkBlack
 val lightOnPrimary = Color(0xFFFFFFFF)
 val lightPrimaryContainer = Color(0xFFFFDBC9)
-val lightOnPrimaryContainer = Color(0xFF331200)
+//val lightOnPrimaryContainer = Color(0xFF331200)
+val lightOnPrimaryContainer = MonoColors.lightBg1
 val lightSecondary = Color(0xFF765848)
 val lightOnSecondary = Color(0xFFFFFFFF)
 val lightSecondaryContainer = Color(0xFFFFDBC9)
@@ -37,3 +41,8 @@ val lightShadow = Color(0xFF000000)
 val lightSurfaceTint = Color(0xFF974811)
 val lightOutlineVariant = Color(0xFFD7C2B9)
 val lightScrim = Color(0xFF000000)
+
+
+
+// PayNow
+

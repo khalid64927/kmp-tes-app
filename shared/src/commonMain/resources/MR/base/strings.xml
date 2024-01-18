@@ -100,17 +100,19 @@
 
     <!--PayNow-->
     <string name="paynow_title">PayNow</string>
-    <string name="paynow_timer">This QR code will expire in</string>
-    <string name="paynow_timer_min">minutes.</string>
-    <string name="paynow_amount">You are paying: </string>
-    <string name="paynow_ref">Reference ID # </string>
-    <string name="paynow_instruction_1">Save or screenshot the QR code to make payment with your bank app.</string>
+    <string name="paynow_timer">This QR code will expire in %s</string>
+    <string name="paynow_timer_minutes">minutes.</string>
+    <string name="paynow_amount">You are paying: %s</string>
+    <string name="paynow_ref">Reference ID # %s</string>
+    <string name="paynow_save_qr_code_button">Save QR Code</string>
 
+    <string name="paynow_instruction_title">PayNow Instructions</string>
+    <string name="paynow_instruction_points">1. Save or screenshot the QR code to pay with your bank or payment app\n\n2. If you have successfully made payment but are not automatically redirected, [click here to refresh](www.google.com). If your payment status is not updated after XX mins, please [contact us](www.google.com).</string>
+    <string name="paynow_instruction_1">Save or screenshot the QR code to make payment with your bank app.</string>
     <!--refer this solution
         https://stackoverflow.com/questions/65567412/jetpack-compose-text-hyperlink-some-section-of-the-text -->
-    <string name="paynow_instruction_2">Already made payment\? Check payment status</string>
-    <string name="paynow_instruction_3">Prefer to pay with other ways\? Change payment method</string>
-
-
+    <string name="paynow_instruction_2">If you have successfully made payment but are not automatically redirected, [click here to refresh](www.google.com). If your payment status is not updated after XX mins, please [contact us](www.google.com).</string>
+    <string name="paynow_back_title">Don’t want to pay with PayNow?</string>
+    <string name="paynow_back_body">Go back and [select a new payment method](www.singtel.com).</string>
 
 </resources>

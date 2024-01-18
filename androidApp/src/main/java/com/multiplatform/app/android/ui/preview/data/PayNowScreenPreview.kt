@@ -9,7 +9,7 @@ import com.multiplatform.app.ui.screens.PayNowScreen
 
 @Preview
 @Composable
-fun payNowScreenPreview(){
+fun PayNowScreenPreview(){
     WithTheme {
         PayNowScreen()
     }
