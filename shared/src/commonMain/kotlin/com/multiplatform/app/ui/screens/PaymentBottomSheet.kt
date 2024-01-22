@@ -18,7 +18,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -26,7 +25,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.multiplatform.app.ui.components.bottomsheet.TransparentBackground
 import kotlinx.coroutines.launch
 
     @OptIn(ExperimentalMaterial3Api::class)
@@ -88,7 +86,6 @@ fun PaymentSheetScreen(
 
                         }
                     }) {
-
                         Text("Hide bottom sheet")
                     }
 

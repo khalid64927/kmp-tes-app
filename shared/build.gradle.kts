@@ -6,7 +6,8 @@ plugins {
     alias(libs.plugins.com.android.library.plugin)
     alias(libs.plugins.org.jetbrains.compose.plugin)
     alias(libs.plugins.org.jetbrains.kotlin.serialization.plugin)
-    // TODO: check why alias is not working
+    // TODO: alis not working with version
+    // https://github.com/gradle/gradle/issues/20084
     //alias(libs.plugins.org.jetbrains.kotlin.native.cocoapods.plugin)
     kotlin("native.cocoapods")
     id("com.codingfeline.buildkonfig")
@@ -14,6 +15,7 @@ plugins {
     id("dev.icerock.mobile.multiplatform-resources")
     id("maven-publish")
     id("signing")
+    alias(libs.plugins.co.touchlab.skie)
 }
 
 kotlin {
@@ -98,6 +100,12 @@ kotlin {
                 implementation(libs.com.google.android.gms.play.services.location)
                 // TODO: check why preview is not working in androidMain
                 implementation(compose.preview)
+                val composeBom = dependencies.platform("dev.chrisbanes.compose:compose-bom:2023.12.00-alpha02")
+                implementation (composeBom)
+                implementation ("androidx.compose.ui:ui")
+                implementation ("androidx.compose.runtime:runtime")
+                implementation ("androidx.compose.foundation:foundation")
+
             }
         }
         val androidUnitTest by getting
