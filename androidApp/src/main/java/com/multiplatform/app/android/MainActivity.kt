@@ -3,6 +3,7 @@ package com.multiplatform.app.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.isSystemInDarkTheme
 import com.multiplatform.app.App
 
 class MainActivity : ComponentActivity() {
@@ -10,8 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             App(
-                //darkTheme = isSystemInDarkTheme(),
-                darkTheme = false,
+                darkTheme = isSystemInDarkTheme(),
                 dynamicColor = true,
             )
         }

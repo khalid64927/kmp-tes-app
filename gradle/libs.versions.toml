@@ -1,27 +1,27 @@
 [versions]
-agp-version = "8.2.0"
+agp-version = "8.2.1"
 androidx-appcompat-version = "1.6.1"
 androidx-activity-compose-version = "1.9.0-alpha01"
 androidx-compose-animation-version = "1.5.4"
 androidx-compose-ui-version = "1.5.4"
 androidx-core-version = "1.12.0"
-androidx-datastore-version = "1.1.0-alpha07"
-com-codingfeline-buildkonfig-gradle-plugin-version = "0.15.0"
+androidx-datastore-version = "1.1.0-beta01"
+com-codingfeline-buildkonfig-gradle-plugin-version = "0.15.1"
 com-google-android-gms-play-services-location-version = "21.0.1"
 compose-version = "1.5.11"
 desugar_jdk_libs = "2.0.4"
 dev-icerock-moko-mvvm-version = "0.16.1"
-dev-icerock-moko-permissions-version = "0.16.0"
+dev-icerock-moko-permissions-version = "0.17.0"
 dev-icerock-moko-resources-version = "0.23.0"
 io-insert-koin-core-version = "3.5.3"
 #Compose Multiplatform 1.5.11 doesn't support Kotlin 1.9.22.
 #Please see https://github.com/JetBrains/compose-jb/blob/master/VERSIONING.md#kotlin-compatibility
 kotlin-version = "1.9.21"
-ktor-version = "2.3.7"
-media-kamel-image-version = "0.8.3"
-moe-tlaster-precompose-version = "1.5.7"
 org-jetbrains-kotlin-multiplatform-version = "1.9.21"
 org-jetbrains-kotlin-native-cocoapods-version = "1.9.21"
+ktor-version = "2.3.7"
+media-kamel-image-version = "0.9.0"
+moe-tlaster-precompose-version = "1.5.8"
 org-jetbrains-kotlinx-coroutines-core-version = "1.7.3"
 org-jetbrains-kotlinx-datetime-version = "0.5.0"
 sqldelight-version = "1.5.5"
@@ -31,6 +31,8 @@ kotest = "5.8.0"
 turbine = "1.0.0"
 material3 = "1.1.2"
 kase64 = "1.1.0"
+qrose = "1.0.0-beta3"
+skie = "0.6.1"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose-version" }
@@ -83,6 +85,8 @@ kotlin-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-j
 androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 kase64-peilicke = { group = "de.peilicke.sascha", name = "kase64", version.ref = "kase64" }
 com-benasher44-uuid = { group = "com.benasher44", name = "uuid", version = "0.8.1" }
+io-github-alexzhirkevich = {group = "io.github.alexzhirkevich", name = "qrose", version.ref = "qrose"}
+
 
 
 [plugins]
@@ -92,6 +96,10 @@ org-jetbrains-compose-plugin = { id = "org.jetbrains.compose", version.ref = "co
 org-jetbrains-kotlin-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-version" }
 org-jetbrains-kotlin-multiplatform-plugin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "org-jetbrains-kotlin-multiplatform-version" }
 org-jetbrains-kotlin-native-cocoapods-plugin = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "org-jetbrains-kotlin-native-cocoapods-version" }
+co-touchlab-skie = { id = "co.touchlab.skie", version.ref = "skie"}
+com-codingfeline-buildkonfig-gradle-plugin = { id = "com.codingfeline.buildkonfig:buildkonfig-gradle-plugin", version.ref = "com-codingfeline-buildkonfig-gradle-plugin-version" }
+com-squareup-sqldelight-gradle-plugin = { id = "com.squareup.sqldelight", version.ref = "sqldelight-version" }
+dev-icerock-mobile-multiplatform-resources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "dev-icerock-moko-resources-version"}
 
 [bundles]
 datastore = [

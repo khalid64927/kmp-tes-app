@@ -25,24 +25,24 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.multiplatform.app.ui.components.bottomsheet.TransparentBackground
 import kotlinx.coroutines.launch
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun DialogExamples() {
-        TransparentBackground {
-            wrapperComposable()
-        }
+        PaymentSheetScreen()
     }
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun wrapperComposable(){
+fun PaymentSheetScreen(
+    onClick: ()-> Unit = { }
+){
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
     var showBottomSheet by remember { mutableStateOf(false) }
+
     Scaffold(
         floatingActionButton = {
             ExtendedFloatingActionButton(
@@ -81,7 +81,9 @@ fun wrapperComposable(){
                         scope.launch { sheetState.hide() }.invokeOnCompletion {
                             if (!sheetState.isVisible) {
                                 showBottomSheet = false
+                                onClick()
                             }
+
                         }
                     }) {
                         Text("Hide bottom sheet")
