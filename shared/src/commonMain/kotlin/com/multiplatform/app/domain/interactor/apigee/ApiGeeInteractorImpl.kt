@@ -3,8 +3,8 @@ package com.multiplatform.app.domain.interactor.apigee
 import com.multiplatform.app.data.remote.config.AppData
 import com.multiplatform.app.data.remote.config.RequestConfig
 import com.multiplatform.app.data.remote.config.onSuccess
-import com.multiplatform.app.data.remote.models.Dto.AuthenticateResponse
-import com.multiplatform.app.data.remote.repositories.PrepaidRepository
+import com.multiplatform.app.data.remote.models.dto.AuthenticateResponse
+import com.multiplatform.app.data.remote.repositories.PaymentSdkRepository
 import com.multiplatform.app.BuildKonfig
 import com.multiplatform.app.data.local.datastore.PreferencesRepository
 import com.multiplatform.app.domain.models.ResourceResult
@@ -18,7 +18,7 @@ import com.multiplatform.app.data.remote.requests.AuthenticateRequest
 class ApiGeeInteractorImpl(
     private val appData: AppData,
     private val preferencesRepository: PreferencesRepository,
-    private val repository: PrepaidRepository): ApiGeeInteractor {
+    private val repository: PaymentSdkRepository): ApiGeeInteractor {
     override suspend fun invoke(): Flow<ResourceResult<AuthenticateResponse>> = flow {
         val clientId = BuildKonfig.PREPAID_CLIENT_ID
         val clientSecret = BuildKonfig.PREPAID_CLIENT_SECRET

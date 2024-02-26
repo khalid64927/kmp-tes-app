@@ -13,7 +13,6 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.sp
 import com.multiplatform.app.ui.theme.MonoColors
 import com.multiplatform.app.ui.theme.MonoColors.lightBlack2
-import dev.icerock.moko.resources.StringResource
 import dev.icerock.moko.resources.compose.stringResource
 
 
@@ -125,9 +124,10 @@ fun HyperlinkText(
     val text = buildAnnotatedString() {
         val links = Regex("""\[(.*?)\]\((.*?)\)""").findAll(textWithLinks)
         var currentIndex = 0
-
         links.forEach { result ->
+            println(" result ${result}")
             val (displayText, url) = result.destructured
+            println(" displayText ${displayText}, url $url")
             val linkStart = result.range.first
             val linkEnd = result.range.last + 1
 
@@ -161,7 +161,7 @@ fun HyperlinkText(
                         annotation.item.startsWith("http") || annotation.item.startsWith("www") -> LinkType.HYPERLINK
                         annotation.item.startsWith("mailto") -> LinkType.MAIL
                         annotation.item.startsWith("tel") -> LinkType.TEL
-                        else -> null
+                        else -> LinkType.JSON
                     }
 
                     linkType?.let {
@@ -173,7 +173,7 @@ fun HyperlinkText(
 }
 
 enum class LinkType {
-    HYPERLINK, MAIL, TEL
+    HYPERLINK, MAIL, TEL, JSON
 }
 
 

@@ -1,6 +1,6 @@
 package com.multiplatform.app.data.remote.config
 
-import com.multiplatform.app.data.remote.models.Dto.ErrorDto
+import com.multiplatform.app.data.remote.models.dto.ErrorDto
 
 
 open class PrepaidApiException(

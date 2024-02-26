@@ -4,7 +4,7 @@ import com.multiplatform.app.data.remote.config.AppData
 import com.multiplatform.app.data.remote.config.RequestConfig
 import com.multiplatform.app.data.remote.config.onFailure
 import com.multiplatform.app.data.remote.config.onSuccess
-import com.multiplatform.app.data.remote.repositories.PrepaidRepository
+import com.multiplatform.app.data.remote.repositories.PaymentSdkRepository
 import com.multiplatform.app.data.remote.requests.GetPayNowDataRequest
 import com.multiplatform.app.domain.models.ResourceResult
 import kotlinx.coroutines.flow.Flow
@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.flow
 
 class GetPayNowInteractorImpl(
     private val appData: AppData,
-    private val repository: PrepaidRepository
+    private val repository: PaymentSdkRepository
 ): GetPayNowInteractor {
 
     // TODO

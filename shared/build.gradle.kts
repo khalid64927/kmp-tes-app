@@ -84,6 +84,8 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation(kotlin("test-common"))
+                implementation(kotlin("test-annotations-common"))
                 implementation(libs.org.jetbrains.kotlinx.coroutines.test)
                 implementation(libs.kotest.assertions)
                 implementation(libs.turbine)

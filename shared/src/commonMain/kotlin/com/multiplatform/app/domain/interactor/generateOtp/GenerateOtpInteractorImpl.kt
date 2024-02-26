@@ -3,14 +3,14 @@ package com.multiplatform.app.domain.interactor.generateOtp
 import com.multiplatform.app.data.remote.config.RequestConfig
 import com.multiplatform.app.data.remote.config.onFailure
 import com.multiplatform.app.data.remote.config.onSuccess
-import com.multiplatform.app.data.remote.models.Dto.GenerateOtpResponse
-import com.multiplatform.app.data.remote.repositories.PrepaidRepository
+import com.multiplatform.app.data.remote.models.dto.GenerateOtpResponse
+import com.multiplatform.app.data.remote.repositories.PaymentSdkRepository
 import com.multiplatform.app.data.remote.requests.GenerateOtpRequest
 import com.multiplatform.app.domain.models.ResourceResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class GenerateOtpInteractorImpl(val repository: PrepaidRepository): GenerateOtpInteractor {
+class GenerateOtpInteractorImpl(val repository: PaymentSdkRepository): GenerateOtpInteractor {
     override suspend fun invoke(
         msisdn: String,
         xClientCode: String

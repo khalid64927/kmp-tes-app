@@ -38,6 +38,7 @@ class PayNowViewModel: BaseViewModel() {
                     ResourceResult.Loading -> _state.loading()
                     is ResourceResult.Error -> _state.payNowQrFailed()
                     is ResourceResult.Success -> _state.payNowQrSuccess()
+                    else -> {}
                 }
             }
         }

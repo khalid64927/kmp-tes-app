@@ -1,4 +1,4 @@
-package com.multiplatform.app.data.remote.models.Dto
+package com.multiplatform.app.data.remote.models.dto
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

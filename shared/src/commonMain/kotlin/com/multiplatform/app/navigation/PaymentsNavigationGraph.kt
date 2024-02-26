@@ -2,7 +2,7 @@ package com.multiplatform.app.navigation
 
 import androidx.compose.runtime.Composable
 import com.multiplatform.app.ui.screens.PayNowScreen
-import com.multiplatform.app.ui.screens.PaymentSheetScreen
+import com.multiplatform.app.ui.screens.PaymentMethodsScreen
 
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.Navigator
@@ -15,8 +15,8 @@ fun PaymentsNavigationGraph(navigator: Navigator = rememberNavigator()){
         initialRoute = "/dialogExamples",
     ) {
         scene("/dialogExamples") {
-            PaymentSheetScreen(onClick = {
-                navigator.navigate("/payNowScreen")
+            PaymentMethodsScreen(onClick = {
+                //navigator.navigate("/payNowScreen")
             })
         }
         scene("/payNowScreen") {

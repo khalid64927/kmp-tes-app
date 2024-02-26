@@ -5,6 +5,8 @@ import com.multiplatform.app.data.local.DataStoreProviderImpl
 import com.multiplatform.app.database.AppDatabase
 import com.multiplatform.app.domain.location.AndroidLocationService
 import com.multiplatform.app.domain.location.LocationService
+import com.multiplatform.app.platform.FileSystem
+import com.multiplatform.app.platform.FileSystemImpl
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import com.squareup.sqldelight.db.SqlDriver
 import dev.icerock.moko.permissions.PermissionsController
@@ -23,6 +25,7 @@ val appModule = module {
             name = "location.db",
         )
     }
+    single<FileSystem> { FileSystemImpl() }
     single { PermissionsController(applicationContext = androidContext())}
     factory <LocationService> { AndroidLocationService(context = androidContext()) }
 }

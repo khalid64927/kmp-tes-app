@@ -6,7 +6,6 @@ import androidx.compose.ui.Modifier
 import com.multiplatform.app.ui.screens.AccountScreen
 import com.multiplatform.app.ui.screens.CommonErrorScreen
 import com.multiplatform.app.ui.screens.CommonWebViewScreen
-import com.multiplatform.app.ui.screens.DialogExamples
 import com.multiplatform.app.ui.screens.HomeScreen
 import com.multiplatform.app.ui.screens.IDDInfoScreen
 import com.multiplatform.app.ui.screens.LoginScreen

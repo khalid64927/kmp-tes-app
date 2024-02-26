@@ -26,7 +26,7 @@ import kotlinx.serialization.json.Json
 
 
 
-class PrepaidClientConfig {
+class PaymentSdkClientConfig {
     fun createPrepaidHttpClient(
         httpClientEngine: HttpClientEngine,
         preferencesRepository: PreferencesRepository,

@@ -10,14 +10,17 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.annotation.RequiresPermission
 import androidx.compose.ui.graphics.asAndroidBitmap
+import com.multiplatform.app.MR
+import dev.icerock.moko.resources.FileResource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 actual interface FileSystem {
     actual suspend fun saveBitmap(imageBitmap: ImageBitmap)
+    actual suspend fun readText(fileResource: FileResource): String
 }
 
-class FileSystemImple: FileSystem, KoinComponent {
+class FileSystemImpl: FileSystem, KoinComponent {
 
     private val context: Context = get()
 
@@ -52,6 +55,10 @@ class FileSystemImple: FileSystem, KoinComponent {
                 showToast(context, "Failed to save image")
             }
         }
+    }
+
+    override suspend fun readText(fileResource: FileResource): String {
+        return fileResource.readText(context)
     }
 
     private suspend fun showToast(context: Context, message: String) {

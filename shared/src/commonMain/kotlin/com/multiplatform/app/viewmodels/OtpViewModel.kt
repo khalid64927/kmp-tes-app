@@ -19,7 +19,7 @@ class OtpViewModel : BaseViewModel(){
 
     private val _state = MutableStateFlow(OtpUiState())
     val state: StateFlow<OtpUiState> = _state.asStateFlow()
-    private val httpClient : HttpClient = get(named("prepaidClient"))
+    private val httpClient : HttpClient = get(named("paymentSdkClient"))
     private val prepaidRepository: PreferencesRepository = get()
     private val generateOtpInteractor: GenerateOtpInteractor = get()
     private val submitOtpInteractor: SubmitOtpInteractor = get()
@@ -39,6 +39,7 @@ class OtpViewModel : BaseViewModel(){
                         is ResourceResult.Success -> { _state.success() }
                         is ResourceResult.Error -> { _state.error() }
                         is ResourceResult.Loading -> { _state.loading() }
+                        else -> {}
                     }
                 }
             }

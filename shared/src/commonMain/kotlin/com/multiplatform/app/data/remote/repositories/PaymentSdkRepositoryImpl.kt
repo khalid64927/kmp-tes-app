@@ -2,10 +2,10 @@ package com.multiplatform.app.data.remote.repositories
 
 import com.multiplatform.app.data.remote.config.PrepaidApiException
 import com.multiplatform.app.data.remote.config.RequestConfig
-import com.multiplatform.app.data.remote.models.Dto.AuthenticateResponse
-import com.multiplatform.app.data.remote.models.Dto.GenerateOtpResponse
-import com.multiplatform.app.data.remote.models.Dto.RegisterDeviceResponse
-import com.multiplatform.app.data.remote.models.Dto.SubmitOtpResponse
+import com.multiplatform.app.data.remote.models.dto.AuthenticateResponse
+import com.multiplatform.app.data.remote.models.dto.GenerateOtpResponse
+import com.multiplatform.app.data.remote.models.dto.RegisterDeviceResponse
+import com.multiplatform.app.data.remote.models.dto.SubmitOtpResponse
 import com.multiplatform.app.data.remote.requests.AuthenticateRequest
 import com.multiplatform.app.data.remote.requests.GenerateOtpRequest
 import com.multiplatform.app.data.remote.requests.RegisterDeviceRequest
@@ -27,18 +27,23 @@ import io.ktor.util.InternalAPI
 import com.multiplatform.app.data.remote.config.Result.Success
 import com.multiplatform.app.data.remote.config.Result.Failure
 import com.multiplatform.app.data.remote.config.Result
-import com.multiplatform.app.data.remote.models.Dto.ErrorDto
+import com.multiplatform.app.data.remote.models.dto.ErrorDto
+import com.multiplatform.app.data.remote.models.dto.InstrumentInfoResponse
+import com.multiplatform.app.data.remote.models.dto.RemoveCardResponse
 import com.multiplatform.app.data.remote.requests.GetPayNowDataRequest
+import com.multiplatform.app.data.remote.requests.InstrumentInfoRequest
+import com.multiplatform.app.data.remote.requests.RemoveCardRequest
 import com.multiplatform.app.util.toJson
 import io.ktor.client.statement.HttpResponse
 import io.ktor.http.append
+import io.ktor.http.parameters
 import kotlinx.serialization.json.Json
 
-class PrepaidRepositoryImpl(
+class PaymentSdkRepositoryImpl(
     private val httpClient: HttpClient,
     private val authClient: HttpClient,
     private val preferencesRepository: PreferencesRepository
-    ): PrepaidRepository {
+    ): PaymentSdkRepository {
 
 
     @OptIn(InternalAPI::class)
@@ -127,6 +132,50 @@ class PrepaidRepositoryImpl(
         }
     }
 
+    override suspend fun instrumentInfo(config: RequestConfig<InstrumentInfoRequest>): Result<InstrumentInfoResponse> {
+        return httpClient.safeRequest {
+            method = HttpMethod.Get
+            url {
+                appendPathSegments(config.urlPath)
+            }
+            contentType(ContentType.Application.Json)
+            headers {
+                append(HttpHeaders.ContentType, ContentType.Application.Json)
+                for ((key, value) in config.headerMap){
+                    append(key, value)
+                }
+            }
+            parameters {
+                for ((key, value) in config.parameters){
+                    append(key, value)
+                }
+            }
+
+        }
+    }
+
+    override suspend fun removeCard(config: RequestConfig<RemoveCardRequest>): Result<RemoveCardResponse> {
+        return httpClient.safeRequest {
+            method = HttpMethod.Post
+            url {
+                appendPathSegments(config.urlPath)
+            }
+            contentType(ContentType.Application.Json)
+            headers {
+                append(HttpHeaders.ContentType, ContentType.Application.Json)
+                for ((key, value) in config.headerMap){
+                    append(key, value)
+                }
+            }
+            parameters {
+                for ((key, value) in config.parameters){
+                    append(key, value)
+                }
+            }
+
+        }
+    }
+
     override suspend fun getPayNowData(config: RequestConfig<GetPayNowDataRequest>): Result<String> {
         // TODO
         return Result.Success("")
@@ -145,7 +194,7 @@ suspend inline fun <reified T> HttpClient.safeRequest(
         println("safeRequest end $response")
         result = Success(response)
     }.onFailure {
-        println("safeRequest request completed")
+        println("safeReqsuest request completed")
         var errorDto = httpResponse?.getErrorDto()
         result = Failure(PrepaidApiException(
             errorMessage = it.message,

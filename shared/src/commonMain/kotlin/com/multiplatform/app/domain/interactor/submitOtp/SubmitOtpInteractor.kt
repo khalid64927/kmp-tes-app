@@ -1,6 +1,6 @@
 package com.multiplatform.app.domain.interactor.submitOtp
 
-import com.multiplatform.app.data.remote.models.Dto.SubmitOtpResponse
+import com.multiplatform.app.data.remote.models.dto.SubmitOtpResponse
 import com.multiplatform.app.data.remote.requests.SubmitOtpData
 import com.multiplatform.app.domain.models.ResourceResult
 import kotlinx.coroutines.flow.Flow

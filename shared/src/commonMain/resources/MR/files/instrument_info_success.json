@@ -1,0 +1,65 @@
+{
+  "amount": "10",
+  "currency": "SGD",
+  "gstDetails": "8",
+  "preferredPaymentMethod": "CC",
+  "successRedirectUrl": "https://success.com",
+  "failureRedirectUrl": "https://failure.com",
+  "txnType": "payment",
+  "instrumentInfo": [
+    {
+      "enabled": true,
+      "instrument": "CC",
+      "ordinal": 1,
+      "sessionJsUrl": "https://mpgs.com/session.js",
+      "operationsAllowed": [
+        "save"
+      ],
+      "serviceAvailable": true,
+      "message": "message",
+      "cardInfo": [
+        {
+          "instrId": "123",
+          "instrToken": "xxxxxxxxxxxx1234",
+          "expired": false,
+          "instrType": "visa"
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "instrument": "ENETS",
+      "ordinal": 2,
+      "serviceAvailable": true,
+      "message": "message"
+    },
+    {
+      "enabled": true,
+      "instrument": "BNPL",
+      "ordinal": 3,
+      "serviceAvailable": true,
+      "message": "message"
+    },
+    {
+      "enabled": true,
+      "instrument": "EGIRO",
+      "ordinal": 4,
+      "serviceAvailable": true,
+      "message": "message",
+      "bankList": [
+        {
+          "bankCode": "bankCode1",
+          "bankName": "bankName1"
+        },
+        {
+          "bankCode": "bankCode2",
+          "bankName": "bankName2"
+        },
+        {
+          "bankCode": "bankCode3",
+          "bankName": "bankName3"
+        }
+      ]
+    }
+  ]
+}

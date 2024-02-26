@@ -23,7 +23,7 @@ class LoginViewModel: BaseViewModel() {
 
     private val _state = MutableStateFlow(LoginUiState())
     val state: StateFlow<LoginUiState> = _state.asStateFlow()
-    private val httpClient : HttpClient = get(named("prepaidClient"))
+    private val httpClient : HttpClient = get(named("paymentSdkClient"))
     private val prepaidRepository: PreferencesRepository = get()
     private val apiGeeInteractor: ApiGeeInteractor = get()
     private val registerDeviceInteractor: RegisterDeviceInteractor = get()
@@ -57,6 +57,10 @@ class LoginViewModel: BaseViewModel() {
                             println("error ${result.throwable.responseBody}")
                         }
                         onEvent(LoginEvent.Error(result.throwable ?: Exception("Something went wrong!")))
+                    }
+
+                    ResourceResult.Initial ->  {
+                        // no-op
                     }
                 }
             }

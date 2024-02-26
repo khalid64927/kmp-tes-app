@@ -5,6 +5,8 @@ import com.multiplatform.app.data.local.datastore.DataStoreProvider
 import com.multiplatform.app.domain.location.IosLocationService
 import com.multiplatform.app.domain.location.LocationService
 import com.multiplatform.app.database.AppDatabase
+import com.multiplatform.app.platform.FileSystem
+import com.multiplatform.app.platform.FileSystemImpl
 import com.squareup.sqldelight.db.SqlDriver
 import com.squareup.sqldelight.drivers.native.NativeSqliteDriver
 import dev.icerock.moko.permissions.ios.PermissionsController
@@ -17,6 +19,7 @@ val appModule = module {
     single<SqlDriver> {
         NativeSqliteDriver(AppDatabase.Schema, "location.db")
     }
+    single<FileSystem> { FileSystemImpl() }
     single<PermissionsControllerProtocol> { PermissionsController() }
     single<LocationService> { IosLocationService() }
 }

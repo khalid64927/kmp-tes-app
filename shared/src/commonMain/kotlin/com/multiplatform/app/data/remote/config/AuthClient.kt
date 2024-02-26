@@ -1,6 +1,6 @@
 package com.multiplatform.app.data.remote.config
 
-import com.multiplatform.app.data.remote.repositories.PrepaidRepository
+import com.multiplatform.app.data.remote.repositories.PaymentSdkRepository
 import com.multiplatform.app.domain.interactor.apigee.ApiGeeInteractor
 import com.multiplatform.app.BuildKonfig
 import com.multiplatform.app.data.local.datastore.PreferencesRepository
@@ -121,6 +121,6 @@ val AuthPlugin = createClientPlugin(name = "AuthPlugin", ::AuthPluginConfig) {
 class AuthPluginConfig: KoinComponent {
     val appData: AppData by inject()
     val apiGeeInteractor: ApiGeeInteractor by inject()
-    val repository: PrepaidRepository by inject()
+    val repository: PaymentSdkRepository by inject()
 
 }

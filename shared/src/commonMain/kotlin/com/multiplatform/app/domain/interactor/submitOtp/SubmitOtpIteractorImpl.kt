@@ -3,15 +3,15 @@ package com.multiplatform.app.domain.interactor.submitOtp
 import com.multiplatform.app.data.remote.config.RequestConfig
 import com.multiplatform.app.data.remote.config.onFailure
 import com.multiplatform.app.data.remote.config.onSuccess
-import com.multiplatform.app.data.remote.models.Dto.SubmitOtpResponse
-import com.multiplatform.app.data.remote.repositories.PrepaidRepository
+import com.multiplatform.app.data.remote.models.dto.SubmitOtpResponse
+import com.multiplatform.app.data.remote.repositories.PaymentSdkRepository
 import com.multiplatform.app.data.remote.requests.SubmitOtpData
 import com.multiplatform.app.data.remote.requests.SubmitOtpRequest
 import com.multiplatform.app.domain.models.ResourceResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class SubmitOtpIteractorImpl(private val repository: PrepaidRepository): SubmitOtpInteractor {
+class SubmitOtpIteractorImpl(private val repository: PaymentSdkRepository): SubmitOtpInteractor {
     override suspend fun invoke(requestData: SubmitOtpData): Flow<ResourceResult<SubmitOtpResponse>>  = flow {
         emit(ResourceResult.Loading)
         repository.submitOtp(RequestConfig(

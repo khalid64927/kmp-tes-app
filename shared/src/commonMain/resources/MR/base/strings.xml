@@ -100,6 +100,9 @@
 
     <!--PayNow-->
     <string name="paynow_title">PayNow</string>
+    <string name="amex_title">Amex</string>
+    <string name="enets_title">eNETS</string>
+    <string name="dash_title">Dash</string>
     <string name="paynow_timer">This QR code will expire in %s</string>
     <string name="paynow_timer_minutes">minutes.</string>
     <string name="paynow_amount">You are paying: %s</string>
@@ -114,5 +117,12 @@
     <string name="paynow_instruction_2">If you have successfully made payment but are not automatically redirected, [click here to refresh](www.google.com). If your payment status is not updated after XX mins, please [contact us](www.google.com).</string>
     <string name="paynow_back_title">Don’t want to pay with PayNow?</string>
     <string name="paynow_back_body">Go back and [select a new payment method](www.singtel.com).</string>
+
+
+    <!--Preview Data start-->
+    <string name="stub_sheet_cc_remove">[Remove](www.singtel.com)</string>
+    <string name="stub_savedCard_title">Visa *3215</string>
+    <string name="stub_card_title">Visa/Master</string>
+    <!--Preview Data end-->
 
 </resources>
